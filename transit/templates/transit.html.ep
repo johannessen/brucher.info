@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<style>
+s {text-decoration:none;color:silver}
+@keyframes blink {
+  from {opacity:1}
+  to {opacity:.2}
+}
+strong {animation: blink 600ms infinite alternate}
+</style>
+
+<pre>
+% for my $item (@$hash) {
+%  my $past = $item->{status} eq 'past' && ! $c->param('date');
+%  my $soon = $item->{status} eq 'soon' && ! $c->param('date');
+<%== $past ? '<s>' : '' %><%= $item->{dep} %><%#= $item->{arr} %> <%= $item->{express} ? 'E' : ' ' %><%= $item->{vialoop} ? 'm' : ' ' %>  <%= $item->{route} %> <%= $item->{direction} %><!--  <a href="https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?start=yes&rt=1&boardType=dep&productsFilter=111111111&maxJourneys=1&time=<%= $item->{dep} %>&delayedJourney=&dirInput=<%= $item->{to_hafas} %>&input=<%= $item->{from_hafas} %>" title="verifizieren bei DB">v</a>--><%== $soon ? '  <strong>*</strong>' : $past ? '</s>' : '' %>
+% }
+
+
+%#= dumper $date
+</pre>
