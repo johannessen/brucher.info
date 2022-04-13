@@ -44,8 +44,9 @@ service, and whether or not the town of Müllenbach is serviced.
 See Also
 --------
 
-* [VRS OpenData GTFS (soll)](https://www.vrsinfo.de/fahrplan/oepnv-daten-fuer-webentwickler.html)
+* [VRS OpenData GTFS (soll)](https://www.vrs.de/fahren/fahrplanauskunft/opendata-/-openservice)
 * [Google Transit API Reference](https://developers.google.com/transit/gtfs/reference/)
+* [General Transit Feed Specification](https://gtfs.org/schedule/)
 * [GTFS class diagram](https://opentransportdata.swiss/wp-content/uploads/2016/11/gtfs_static.png)
 * [Stackoverflow – How can I make my GTFS queries run faster?](https://stackoverflow.com/questions/25750057/how-can-i-make-my-gtfs-queries-run-faster)
 
